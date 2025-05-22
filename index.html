@@ -18,17 +18,20 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     style="box-shadow: 0 4px 10px rgba(34, 197, 94, 0.5);">
     <h1 class="text-2xl font-bold md:p-1">GREENDEN</h1>
     <!-- Hamburger icon for mobile -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-6 h-6 md:hidden">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
+   
+      <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row gap-4 px-5 text-black font-thin absolute md:static top-16 right-4 md:top-auto md:right-auto bg-white md:bg-transparent border border-gray-300 md:border-none shadow-lg md:shadow-none rounded-lg md:rounded-none p-4 md:p-0 z-50 transition-all duration-300 ease-in-out">
+ 
 
-    <ul class="hidden md:flex gap-3 text-gray-600 px-5">
       <li><a href="index.html" class="hover:underline hover:text-black">Home</a></li>
       <li><a href="product.html" class="hover:underline hover:text-black">Products</a></li>
       <li><a href="contact.html" class="hover:underline hover:text-black">Contact us</a></li>
     </ul>
   </nav>
+  
 
   <!-- Header section -->
   <header class="bg-green-200 p-8 flex flex-col md:flex-row md:justify-evenly md:px-30 py-10 ">
@@ -96,11 +99,11 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <!-- best seller section -->
     <section class=" text-center py-10 rounded-lg shadow-lg md:bg-green-200">
       <h1 class="font-bold text-3xl m-4">Best Seller</h1>
-      <div class="grid grid-cols-2 md:flex flex-row justify-around items-center ">
+      <div class="grid grid-cols-2 md:flex flex-row justify-around items-center gap-6 ">
         <div>
-          <img src="./img/rose.png"
+          <img src="./img/plant a.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200">
-          <h1 class="font-medium">Rose Plant</h1>
+          <h1 class="font-medium"> Green Plant</h1>
           <p>$20</p>
         </div>
         <div><img src="./img/plant1.png"
@@ -173,7 +176,7 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     <p>Signup for email newspaper to get exclusive discounts,updates and more..</p>
     <input type="text" class="m-6 w-96 p-2 rounded " style="width: 60%; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.9);">
     
-    <button class="bg-black p-2 text-white rounded text-sm  hover:bg-gray-700" style=" box-shadow: 0 4px 10px rgb(65, 184, 107, 1);">Signup</button>
+    <button class="bg-black p-2 text-white rounded text-sm " style=" box-shadow: 0 4px 10px rgb(65, 184, 107, 1);">Signup</button>
   </div>
 
 </section>
@@ -192,5 +195,15 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
 
 </body>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
 
 </html>

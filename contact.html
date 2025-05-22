@@ -18,12 +18,13 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     style="box-shadow: 0 4px 10px rgba(34, 197, 94, 0.5);">
     <h1 class="text-2xl font-bold md:p-1">GREENDEN</h1>
     <!-- Hamburger icon for mobile -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-6 h-6 md:hidden">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
 
-    <ul class="hidden md:flex gap-3 text-gray-600 px-5">
+     <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row gap-4 px-5 text-black font-thin absolute md:static top-16 right-4 md:top-auto md:right-auto bg-white md:bg-transparent border border-gray-300 md:border-none shadow-lg md:shadow-none rounded-lg md:rounded-none p-4 md:p-0 z-50 transition-all duration-300 ease-in-out">
+ 
       <li><a href="index.html" class="hover:underline hover:text-black">Home</a></li>
       <li><a href="product.html" class="hover:underline hover:text-black">Products</a></li>
       <li><a href="contact.html" class="hover:underline hover:text-black">Contact us</a></li>
@@ -54,3 +55,22 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     </form>
   </div>
 </section>
+ <!-- Footer -->
+    
+    <footer class=" bg-black p-2 shadow-lg ">
+  <div class="text-white text-left p-5 flex flex-col gap-5">
+  <h1 class="font-bold text-xl">GREENDEN</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat quibusdam explicabo ratione culpa consequatur repellendus dolorum velit sunt similique?</p>
+  <p>@ 2025 Greenday.com</p>
+  </div>
+</footer>
+</body>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+</html>

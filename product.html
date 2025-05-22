@@ -18,42 +18,44 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     style="box-shadow: 0 4px 10px rgba(34, 197, 94, 0.5);">
     <h1 class="text-2xl font-bold p-1">GREENDEN</h1>
     <!-- Hamburger icon for mobile -->
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+    <svg id="menu-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
       class="w-6 h-6 md:hidden">
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
 
-    <ul class="hidden md:flex gap-3 text-gray-600 px-5">
+     <ul id="mobile-menu" class="hidden md:flex flex-col md:flex-row gap-4 px-5 text-black font-thin absolute md:static top-16 right-4 md:top-auto md:right-auto bg-white md:bg-transparent border border-gray-300 md:border-none shadow-lg md:shadow-none rounded-lg md:rounded-none p-4 md:p-0 z-50 transition-all duration-300 ease-in-out">
+ 
       <li><a href="index.html" class="hover:underline hover:text-black">Home</a></li>
       <li><a href="product.html" class="hover:underline hover:text-black">Products</a></li>
       <li><a href="contact.html" class="hover:underline hover:text-black">Contact us</a></li>
     </ul>
   </nav>
+  
   <!-- Our products -->
-   <section class="mt-10  text-center ">
+   <section class="mt-10 text-center ">
     <h1 class="text-2xl font-bold">Our Products</h1>
-     <input type="text" class="m-6 w-96 p-2 rounded border  " style="width: 60%; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);" placeholder="Search">
+     <input type="text" class="m-6 w-96 p-2 rounded border hover: border-green-200 focus:border-green-200 " style="width: 60%; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);" placeholder="Search">
 
-    <section class=" text-center  rounded-lg shadow-lg  ">
+    <section class=" text-center   rounded-lg shadow-lg  ">
     
-      <div class="grid grid-cols-2 p-8 md:flex flex-row justify-around items-center md:px-20 ">
-        <div>
+      <div class="grid grid-cols-2 gap-6 md:flex flex-row justify-around items-center md:px-20 ">
+        <div class="mb-5">
           <img src="./img/plant d.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200">
           <h1 class="font-medium">Rose Plant</h1>
           <p>$20</p>
         </div>
-        <div><img src="./img/plant c.png"
+        <div class="mb-5"><img src="./img/plant c.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200" alt="">
           <h1 class="font-medium"> White Plant </h1>
           <p>$32</p>
         </div>
-        <div><img src="./img/plant b.png"
+        <div class="mb-5"><img src="./img/plant b.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200" alt="">
           <h1 class="font-medium">Green Plant</h1>
           <p>$23</p>
         </div>
-        <div><img src="./img/plant a.png"
+        <div class="mb-5"><img src="./img/plant a.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200" alt="">
           <h1 class="font-medium">Money Plant</h1>
           <p>$24</p>
@@ -61,24 +63,24 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
       </div>
       
     
-      <div class="grid grid-cols-2 py-8 mt-6 md:flex flex-row justify-around items-center md:px-20">
-        <div>
+      <div class="grid grid-cols-2 mb-10 gap-6  md:flex flex-row justify-around items-center md:px-20">
+        <div class="mb-5">
           <img src="./img/rose.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200">
           <h1 class="font-medium">Rose Plant</h1>
           <p>$20</p>
         </div>
-        <div><img src="./img/plant1.png"
+        <div class="mb-5"><img src="./img/plant1.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200" alt="">
           <h1 class="font-medium"> White Plant </h1>
           <p>$32</p>
         </div>
-        <div><img src="./img/plant2.png"
+        <div class="mb-10"><img src="./img/plant2.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200" alt="">
           <h1 class="font-medium">Green Plant</h1>
           <p>$23</p>
         </div>
-        <div><img src="./img/plant4.png"
+        <div class="mb-10"><img src="./img/plant4.png"
             class="inline m-2 shadow-2xl transform hover:-translate-y-2 transition duration-200" alt="">
           <h1 class="font-medium">Money Plant</h1>
           <p>$24</p>
@@ -87,15 +89,24 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
     </section>
     <!-- Footer -->
     
-    <section class=" bg-black p-2 shadow-lg ">
+    <footer class=" bg-black p-2 shadow-lg ">
   <div class="text-white text-left p-5 flex flex-col gap-5">
   <h1 class="font-bold text-xl">GREENDEN</h1>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fugiat quibusdam explicabo ratione culpa consequatur repellendus dolorum velit sunt similique?</p>
   <p>@ 2025 Greenday.com</p>
   </div>
-  </section>
+</footer>
    
 
     
   </body>
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 </html>
